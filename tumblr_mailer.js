@@ -11,7 +11,6 @@ var mandrill = require('mandrill-api/mandrill');
 var mandrill_client = new mandrill.Mandrill('GQWiPbAEJPk7Q9PKHvVI-g');
 
 var friendListCSV = fs.readFileSync("friend_list.csv","utf8");
-csvParse(friendListCSV);
 
 var friends = csvParse(friendListCSV);
 
