@@ -1,0 +1,24 @@
+  <html>
+  <head><meta charset='utf-8'></head>
+  <body>
+    <p>Hey <%=firstName%>!</p>
+    <p>
+      How are you?
+    </p>
+    <p>How are <%=interest1%> and <%=interest2%>?</p>
+    <p> I just wrote a program to automatically personalize this email for you, my dear <%=relationship%>, and include my recent blog posts. (I used Node.js, the Tumblr API, and Mandrill.)
+    </p>
+    <p> Here are the blog posts:
+      <ul>
+        <%for (var i = 0; i<latestPosts.length; i++)
+        {%>
+          <li><a href = <%= latestPosts[i].post_url%> > <%=latestPosts[i].title%> </a></li>
+        <%}%>
+      </ul>
+    </p>
+    <p>
+      Love,<br>
+      Kathy
+    </p>
+  </body>
+  </html>
